@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head>
+  <title>The game!</title>
+  <style> 
+    body { color:blue; } 
+  </style>
+  <script>  
+function dicer () {
+
+    var roll = (Math.random()*6+1)
+    document.querySelector(".dice").innerHTML=`You rolled a ${roll}`
+}
+  </script>
+</head><body>
+
+  <p class="dice" onclick="dicer()">Aloha!</p>
+</body></html>
+          
