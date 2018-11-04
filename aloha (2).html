@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+<style>
+
+body { color:blue;
+font-family: 'Bad Script';font-size: 22px;
+ } 
+
+.completed {
+height:100px; 
+width:100px;
+background-color:#414141;
+}
+
+  </style>
+<title>The game!</title>
+  <script>  
+function dicer () {
+
+    var roll = (Math.random()*6+1)
+    document.querySelector(".dice").innerHTML=`You rolled a ${roll}`
+}
+  </script>
+</head><body>
+
+<button class="completed" onclick="dicer()"></button></br>
+<h1>
+  <p class="dice" onclick="dicer()">This is the game.</p>
+
+</body></html>
+          
