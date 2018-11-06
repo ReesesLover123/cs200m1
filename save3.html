@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'> <!--This allows us to use a google font in our project instead of the normal ones.-->
+<style>
+
+body { color:blue;
+font-family: 'Bad Script';font-size: 22px;
+ } 
+
+.completed {
+height:100px; 
+width:100px;
+background-color:#414141;
+}
+
+</style>
+<title>The game!</title>
+<script> //contains roll function.
+    function dicer() {                   
+        var vic = 0;
+    var roll = (Math.floor(Math.random() * 6 + 1))//math.random rolls a dice from 1-6
+    document.querySelector(".dice").innerHTML = `You rolled a ${roll}!`
+        if (roll > 2) {
+            document.querySelector(".status").innerHTML = 'Game Clear!';
+            document.querySelector(".counter").innerHTML = `${vic}`
+    }
+    else {
+        document.querySelector(".status").innerHTML = 'Game over!';
+        confirm("You picked wrong! That's game over!");
+    }
+}
+</script>
+</head>
+<body>
+    <h1 style="font-size: 40px; font-weight: bold;">Pick a button!</h1>
+<button class="completed" onclick="dicer()"></button></br>
+<h1>
+  <p class="dice" onclick="dicer()">This is the game.</p>
+   <div class="results">
+   <p class="status"></p>
+       <a id="counter">0</a>
+   </div>
+
+</body></html>
+          
