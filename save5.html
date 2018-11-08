@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'> <!--This allows us to use a google font in our project instead of the normal ones.-->
+    <style>
+
+        body {
+            color: blue;
+            font-family: 'Bad Script';
+            font-size: 22px;
+        }
+
+        .button {
+            height: 100px;
+            width: 100px;
+            background-color: #414141;
+            border-radius: 8px;
+        }
+
+        .counter {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            font-size: 24px;
+        }
+    </style>
+    <title>The game!</title>
+    <script>
+//contains roll function.
+        var vic = 0;
+        function dicer() {
+
+            var roll1 = (Math.floor(Math.random() * 6 + 1))//math.random rolls a dice from 1-6
+            document.querySelector(".dice").innerHTML = `You rolled a ${roll1}!`
+            if (roll1 > 2) {
+
+                vic += 1;
+                document.querySelector(".status").innerHTML = 'Game Clear!';
+                document.querySelector(".counter").innerHTML = `Stages cleared : ${vic} / 7`
+                if (vic > 2) {
+                    document.createElement("button");
+                }
+            }
+            else {
+                vic = 0;
+                document.querySelector(".status").innerHTML = 'Game over!';
+                confirm("You picked wrong! That's game over!");
+                document.querySelector(".counter").innerHTML = `Stages cleared : ${vic} / 7`
+                location.reload();
+
+
+            }
+        }
+    </script>
+</head>
+<body style="background-color: lightblue">
+    <h1 style="font-size: 40px; font-weight: bold;">Pick a button!</h1>
+    <button class="button" onclick="dicer()"></button></br>
+    <h1>
+        <p class="dice" onclick="dicer()">This is the game.</p>
+        <div class="results">
+            <p class="status"></p>
+            <a class="counter">Stages Cleared : 0</a>
+        </div>
+
+</body>
+</html>
