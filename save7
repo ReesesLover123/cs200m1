@@ -44,11 +44,9 @@ font-size: 40px; font-weight: bold;
                 vic += 1;
                 document.querySelector(".status").innerHTML = 'Game Clear!'
                 document.querySelector(".counter").innerHTML = `Stages cleared : ${vic} / 7`
-                if (vic > 3) {
-                window.location.replace("http://sidanmor.com");
+                
 
-            }
-            else {
+                        else {
                 vic = 0;
                 document.querySelector(".status").innerHTML = 'Game over!';
                 confirm("You picked wrong! That's game over!");
