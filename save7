@@ -26,7 +26,8 @@
             font-size: 24px;
         }
          
-        h1 {
+        h1 {}
+        .button { background-color: ff6250;}
 font-size: 40px; font-weight: bold;
 } 
     </style>
@@ -60,7 +61,7 @@ font-size: 40px; font-weight: bold;
 </head>
 <body>
     <h1>Pick a button!</h1>
-    <button class="button" onclick="dicer()"></button></br>
+    <button class="button" onclick="dicer()"></button> <button class="button" onclick="dicer()"></button> <button class="button" onclick="dicer()"></button>
        
         <div class="results">
             <p class="dice"></p>
